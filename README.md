@@ -13,7 +13,7 @@ A RESTful API allowing users to create, view, update, and delete tasks with ease
 8. [Docker Instructions](#docker-instructions)
 9. [Implementation Choices](#implementation-choices)
 10. [Challenges & Solutions](#challenges--solutions)
-11. [Potential improvements](#future)
+11. [Potential improvements](#potential-improvements)
 
 ---
 
@@ -255,7 +255,7 @@ Some dependencies, like uvicorn and pytest, were not initially accessible throug
 
 To ensure compatibility regardless of PATH configuration, I standardized commands using python -m (e.g., python -m uvicorn) in the README instructions. This approach guarantees that the application can be run consistently, even if packages are not directly in the PATH.
 
-## Future Improvements
+## Potential Improvements
 
 <u>Current Handling of Synchronous Database Calls</u>
 <u>Using psycopg2</u>: The application currently uses psycopg2 for database interactions with PostgreSQL. psycopg2 is a popular and reliable library for PostgreSQL, but it operates synchronously, meaning each database query blocks the event loop until it completes.
