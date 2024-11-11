@@ -18,6 +18,7 @@ updated_task_data = {
     "status": "In Progress"
 }
 
+#testing creating a task
 @pytest.fixture
 def create_task():
     """Fixture to create a task for testing."""
@@ -39,13 +40,13 @@ def test_end_to_end_task_lifecycle():
     updated_task = response.json()
     assert updated_task["title"] == updated_task_data["title"]
 
-    #Retrieving the Updated Task
+    #testing retrieving the Updated Task
     response = client.get(f"/tasks/{task_id}")
     assert response.status_code == 200
     retrieved_task = response.json()
-    assert retrieved_task["status"] == "In Progress"  # Confirm retrieved status
+    assert retrieved_task["status"] == "In Progress"
 
-    #Deleting the Task
+    #testing deleting a Task by its id
     response = client.delete(f"/tasks/{task_id}")
     assert response.status_code == 204
 
@@ -58,7 +59,7 @@ def test_end_to_end_task_lifecycle():
 def test_get_task_empty_database():
     response = client.get("/tasks/9999")
     assert response.status_code == 404
-    
+
 #testing deleting a task from empty database
 def test_delete_task_empty_database():
     response = client.delete("/tasks/9999")
