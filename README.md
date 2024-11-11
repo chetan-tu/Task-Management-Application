@@ -71,7 +71,7 @@ The application includes a PostgreSQL database for data storage, environment-bas
 
 ## Tech Stack
 
-- **Framework**: FastAPI (Python)
+- **Framework**: FastAPI (Python = 3.12.7)
 - **Database**: PostgreSQL (for production and testing)
 - **Containerization**: Docker
 - **CI/CD**: GitHub Actions
