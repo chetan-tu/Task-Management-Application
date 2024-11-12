@@ -19,8 +19,6 @@ A RESTful API allowing users to create, view, update, and delete tasks with ease
 
 ## Project Overview
 
-## Project Overview
-
 The Task Management Application provides a RESTful API to manage tasks. Users can perform the following operations:
 
 - **Create tasks**: Add new tasks with titles, descriptions, and statuses.
