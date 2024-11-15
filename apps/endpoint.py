@@ -81,7 +81,7 @@ def create_task(task: Task):
     return new_task
 
 # Endpoint to retrieve a single task by ID
-@router.get("/{id}",description="Endpoint to retrieve a single task by ID",status_code=status.HTTP_200_OK,responses={
+@router.get("/{id}",description="Endpoint to retrieve a single task by ID",response_model=TaskResponse,status_code=status.HTTP_200_OK,responses={
         200: {
             "description": "Task retrieved successfully",
             "content": {
@@ -130,7 +130,7 @@ def read_task(id: int = Path(..., description="The ID of the task to be deleted"
     return task
 
 # Endpoint to update a task by ID
-@router.put("/{id}",description="Endpoint to update a single task by ID",status_code=status.HTTP_200_OK,responses={
+@router.put("/{id}",description="Endpoint to update a single task by ID",response_model=TaskResponse,status_code=status.HTTP_200_OK,responses={
         200: {
             "description": "Task updated successfully",
             "content": {
