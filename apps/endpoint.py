@@ -20,7 +20,7 @@ def read_all_tasks():
             "id": task["id"],
             "title": task["title"],
             "description": task["description"],
-            "status": task["status"] if task["status"] is not None else "Open",  # Default to "Open" if None
+            "status": task["status"],
             "created_at": task["created_at"],
             "updated_at": task["updated_at"]
         }
