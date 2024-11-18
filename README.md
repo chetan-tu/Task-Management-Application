@@ -123,7 +123,7 @@ The application includes a PostgreSQL database for data storage, environment-bas
      ```
    - The application will be accessible at `http://127.0.0.1:8000`.
 
-   - If you prefer to run the application with Docker, refer to the [Docker Instructions](#running-the-application-with-docker) section for instructions.
+   - If you prefer to run the application with Docker, refer to the [Docker Instructions](#docker-instructions) section for instructions.
 
 
 - Once the application is running, open your browser and navigate to `http://127.0.0.1:8000/docs`.
