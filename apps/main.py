@@ -2,10 +2,12 @@ from fastapi import FastAPI
 
 from .endpoint import router
 
+#FastAPI instance
+app = FastAPI()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-#FastAPI instance
 app = FastAPI()
 
 origins = ["*"] # allowing access to all domain for simplicty but can be restricted as needed.

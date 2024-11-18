@@ -15,9 +15,10 @@ class Task(BaseModel):
     status: Optional[TaskStatus] = Field("In Progress", example="Open")
     created_at: Optional[datetime] = Field(None, example="2024-11-09 15:04:45.504965")
     updated_at: Optional[datetime] = Field(None, example="2024-11-09 15:04:45.504965")
-
+    
     class Config:
         extra = "forbid"  # Forbid extra fields to be passed in API call.
+
 
 class TaskResponse(BaseModel):
     id: int = Field(..., example=1)
@@ -27,3 +28,4 @@ class TaskResponse(BaseModel):
     created_at: datetime = Field(..., example="2024-11-09T15:04:45.504965")
     updated_at: datetime = Field(..., example="2024-11-09T15:04:45.504965")
 
+    
